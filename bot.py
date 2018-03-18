@@ -28,12 +28,13 @@ class BotHandler(object):
 def main():
 
 
-    token = "532430258:AAHrCBTpWkF8afrftLg6KT5rJLg6LhNoYbU"
+    token = "537225479:AAGWqBwv3QmkcSKLuPqv8MrAFQdrvv66in4"
 
     bot = BotHandler(token)
     offset = 0
 
     while True:
+        print("ll")
         updates = bot.get_updates(offset=offset)
         for update in updates:
             print(update)
