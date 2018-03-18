@@ -28,7 +28,7 @@ class BotHandler(object):
 def main():
 
 
-    token = "537225479:AAGWqBwv3QmkcSKLuPqv8MrAFQdrvv66in4"
+    token = "532430258:AAHrCBTpWkF8afrftLg6KT5rJLg6LhNoYbU"
 
     bot = BotHandler(token)
     offset = 0
@@ -40,6 +40,8 @@ def main():
             chat_id = update["message"]["chat"]["id"]
             if "text" in update["message"]:
                 bot.send_message(chat_id, "ECHooO: " + update["message"]["text"])
+
+
             offset = max(offset, update['update_id'] + 1)
 
         time.sleep(1)
