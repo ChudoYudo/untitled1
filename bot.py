@@ -26,18 +26,9 @@ class BotHandler(object):
 
 
 def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--token', type=str, default='')
-    args = parser.parse_args()
 
-    token = args.token
-    if not token:
-        if not "TELEGRAM_TOKEN" in os.environ:
-            print(
-                "Please, set bot token through --token or TELEGRAM_TOKEN env variable"
-            )
-            return
-        token = os.environ["TELEGRAM_TOKEN"]
+
+    token = "537225479:AAGWqBwv3QmkcSKLuPqv8MrAFQdrvv66in4"
 
     bot = BotHandler(token)
     offset = 0
@@ -48,7 +39,7 @@ def main():
             print(update)
             chat_id = update["message"]["chat"]["id"]
             if "text" in update["message"]:
-                bot.send_message(chat_id, "ECHO: " + update["message"]["text"])
+                bot.send_message(chat_id, "ECHooO: " + update["message"]["text"])
             offset = max(offset, update['update_id'] + 1)
 
         time.sleep(1)
