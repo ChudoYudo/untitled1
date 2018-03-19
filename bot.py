@@ -6,6 +6,7 @@ import datetime
 import time
 import argparse
 import os
+import pymongo
 
 
 class BotHandler(object):
@@ -32,6 +33,10 @@ def main():
 
     bot = BotHandler(token)
     offset = 0
+    kk=["lolkek"]
+
+    with open( "kek.txt", 'w') as file:
+        json.dump(kk, file, indent=2)
 
     while True:
         print("ll")
